@@ -1,0 +1,33 @@
+{
+   "background": {
+      "service_worker": "lib/browser-polyfill.min.js",
+	  "service_worker": "utils.js",
+	  "service_worker": "service_worker.js"
+   },
+   "action": {
+      "default_icon": {
+         "128": "images/hd_128.png",
+         "19": "images/hd_128.png",
+         "38": "images/hd_128.png"
+      },
+      "default_title": "YouTube HD"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [  ],
+      "js": [ "lib/browser-polyfill.min.js", "utils.js", "content/embedded-frame-js-flag.js", "content/yt-auto-hd.js", "content.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Fixed res",
+   "icons": {
+      "128": "images/hd_128.png",
+      "16": "images/hd_128.png",
+      "48": "images/hd_128.png"
+   },
+   "manifest_version": 3,
+   "name": "YouTube HD",
+   "permissions": [ "tabs", "storage" ],
+   "host_permissions": [ "\u003Call_urls>" ],
+   "version": "1.0"
+}
